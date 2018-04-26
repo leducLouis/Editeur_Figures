@@ -107,5 +107,9 @@ public class ShapePolygone implements Shape {
 	public void setSideLenght(double sideLenght) {
 		this.sideLenght = sideLenght;
 	}
+	
+	public double[] getCoord() {
+		return coord;
+	}
 
 }
