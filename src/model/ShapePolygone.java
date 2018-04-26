@@ -26,7 +26,9 @@ public class ShapePolygone implements Shape {
 		this.xCenter = xCenter;
 		this.yCenter = yCenter;
 		this.color = color;
-		setCoord(nbSides);
+		this.setCoord(nbSides);
+		this.setXCenter();
+		this.setYCenter();
 	}
 	
 	public void setCoord(int nbSides) {
