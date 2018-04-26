@@ -14,7 +14,7 @@ public class ShapeDrawerFx implements ShapeDrawer{
 
 	@Override
 	public void drawRectangle(ShapeRectangle rect, Pane pane) {
-		Rectangle fxRect = new Rectangle(rect.getXpos(), rect.getYpos(), rect.getWidth(), rect.getHeight());
+		Rectangle fxRect = new Rectangle((int)rect.getXpos(), (int)rect.getYpos(), rect.getWidth(), rect.getHeight());
 		
 		fxRect.setFill(Color.rgb(
 			rect.getColor().getRed(),
