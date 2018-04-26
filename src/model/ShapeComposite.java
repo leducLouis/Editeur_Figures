@@ -44,25 +44,25 @@ public class ShapeComposite implements ShapeComposant {
 	}
 
 	@Override
-	public int getXpos() {
+	public double getXpos() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public void setXpos(int xpos) {
+	public void setXpos(double xpos) {
 		// TODO Auto-generated method stub
 		
 	}
 
 	@Override
-	public int getYpos() {
+	public double getYpos() {
 		// TODO Auto-generated method stub
 		return 0;
 	}
 
 	@Override
-	public void setYpos(int ypos) {
+	public void setYpos(double ypos) {
 		// TODO Auto-generated method stub
 		
 	}

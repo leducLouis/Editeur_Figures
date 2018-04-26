@@ -3,7 +3,7 @@ package model;
 import java.awt.Color;
 
 public class ShapeRectangle implements Shape{
-	public ShapeRectangle(int xpos, int ypos, int width, int height, int rotation, int xCenter, int yCenter, Color color,
+	public ShapeRectangle(double xpos, double ypos, int width, int height, double rotation, double xCenter, double yCenter, Color color,
 			int round) {
 		super();
 		this.xpos = xpos;
@@ -16,26 +16,26 @@ public class ShapeRectangle implements Shape{
 		this.color = color;
 		this.round = round;
 	}
-	private int xpos;
-	private int ypos;
+	private double xpos;
+	private double ypos;
 	private int width;
 	private int height;
-	private int rotation;
-	private int xCenter;
-	private int yCenter;
+	private double rotation;
+	private double xCenter;
+	private double yCenter;
 	private Color color;
 	private int round;
 	
-	public int getXpos() {
+	public double getXpos() {
 		return xpos;
 	}
-	public void setXpos(int xpos) {
+	public void setXpos(double xpos) {
 		this.xpos = xpos;
 	}
-	public int getYpos() {
+	public double getYpos() {
 		return ypos;
 	}
-	public void setYpos(int ypos) {
+	public void setYpos(double ypos) {
 		this.ypos = ypos;
 	}
 	public int getWidth() {
@@ -50,23 +50,23 @@ public class ShapeRectangle implements Shape{
 	public void setHeight(int height) {
 		this.height = height;
 	}
-	public int getRotation() {
+	public double getRotation() {
 		return rotation;
 	}
-	public void setRotation(int rotation) {
+	public void setRotation(double rotation) {
 		this.rotation = rotation;
 	}
-	public int getXCenter() {
+	public double getXCenter() {
 		return xCenter;
 	}
-	public void setXCenter(int xCenter) {
-		this.xCenter = xCenter;
+	public void setXCenter(){
+		xCenter = this.getXpos()+this.getWidth()/2;
 	}
-	public int getYCenter() {
+	public double getYCenter() {
 		return yCenter;
 	}
-	public void setYCenter(int yCenter) {
-		this.yCenter = yCenter;
+	public void setYCenter() {
+		yCenter = this.getYpos()+this.getHeight()/2;
 	}
 	public Color getColor() {
 		return color;

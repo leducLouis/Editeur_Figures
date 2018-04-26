@@ -36,8 +36,8 @@ public class ShapePolygone implements Shape{
 		int indice = 2;
 		int cpt = nbSides-1;
 		while(cpt!=0) {
-			coord[indice] = getXCenter() + calculateRay()*Math.cos(angleFromCenter());
-			coord[indice+1] = getYCenter() + calculateRay()*Math.sin(angleFromCenter());
+			coord[indice] = this.getXCenter() + this.calculateRay()*Math.cos(this.angleFromCenter());
+			coord[indice+1] = this.getYCenter() + this.calculateRay()*Math.sin(this.angleFromCenter());
 			indice = indice+2;
 			cpt--;
 		}
@@ -48,15 +48,15 @@ public class ShapePolygone implements Shape{
 	}
 	
 	public double calculateRay() {
-		return Math.sqrt((1-Math.cos(angleFromCenter())-sideLenght*sideLenght)/2);
+		return Math.sqrt((1-Math.cos(this.angleFromCenter())-sideLenght*sideLenght)/2);
 	}
 	
 	public void setXCenter() {
-		xCenter = getXpos()-calculateRay()*Math.cos(angleFromCenter());
+		xCenter = this.getXpos()-this.calculateRay()*Math.cos(this.angleFromCenter());
 	}
 	
 	public void setYCenter() {
-		yCenter = getYpos()-calculateRay()*Math.sin(angleFromCenter());
+		yCenter = this.getYpos()-this.calculateRay()*Math.sin(this.angleFromCenter());
 	}
 	
 	public double getXpos() {
