@@ -9,11 +9,12 @@ public class FenetreJavaFx implements Fenetre {
 	public FenetreJavaFx(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
+			Scene scene = new Scene(root,1000,800);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			ShapeDrawer shapeDrawer = new ShapeDrawerFx();
 			Canevas canevas = new CanevasJavaFx(shapeDrawer, scene);
 			primaryStage.setScene(scene);
+			primaryStage.setTitle("Editeur de figures");
 			primaryStage.show();
 			
 			
