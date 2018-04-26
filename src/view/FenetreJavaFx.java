@@ -13,6 +13,7 @@ public class FenetreJavaFx implements Fenetre {
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			ShapeDrawer shapeDrawer = new ShapeDrawerFx();
 			Canevas canevas = new CanevasJavaFx(shapeDrawer, scene);
+			Toolbar toolbar = new ToolbarJavaFx(shapeDrawer, scene);
 			primaryStage.setScene(scene);
 			primaryStage.setTitle("Editeur de figures");
 			primaryStage.show();

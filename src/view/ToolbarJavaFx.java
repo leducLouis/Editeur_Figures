@@ -1,11 +1,12 @@
 package view;
 
 
+import javafx.scene.Scene;
 import model.Shape;
 
 public class ToolbarJavaFx implements Toolbar{
 
-	public ToolbarJavaFx() {
+	public ToolbarJavaFx(ShapeDrawer shapeDrawer, Scene scene) {
 		// TODO Auto-generated constructor stub
 	}
 
