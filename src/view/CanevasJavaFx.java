@@ -20,8 +20,8 @@ public class CanevasJavaFx implements Canevas{
 		ShapeRectangle rect = new ShapeRectangle(20, 20, 250, 100, 0, 0, 0, couleur , 0);
 		ShapePolygone poly = new ShapePolygone(0, 0, 0, 0, 0, 0, 0, null);
 		
-		double canevasHeight = 400;
-		double canevasWitdth = 500;
+		double canevasHeight = (95*scene.getHeight())/100;
+		double canevasWitdth = (95*scene.getWidth())/100;
 		Pane canevas = new Pane();
 		canevas.setPrefSize(canevasWitdth, canevasHeight);
 		drawBorders(canevas, canevasHeight, canevasWitdth);
@@ -32,10 +32,11 @@ public class CanevasJavaFx implements Canevas{
 	
 	
 	private void drawBorders(Pane canevas, double height, double width){
-		Line border1 = new Line(0,0,canevas.getWidth(),0);
-		System.out.println(canevas.getWidth());
-		Line border2 = new Line (0,0,canevas.getHeight(), canevas.getWidth());
-		canevas.getChildren().add(border2);
+		Line border1 = new Line(0,0,width,0);
+		Line border2 = new Line (0,0, 0, height);
+		Line border3 = new Line (width, 0,width, height );
+		Line border4 = new Line (0, height, width, height);
+		canevas.getChildren().addAll(border1, border2, border3, border4);
 		
 	}
 
