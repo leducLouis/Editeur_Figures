@@ -4,9 +4,9 @@ import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
-public class SceneJavaFx implements Fenetre {
+public class FenetreJavaFx implements Fenetre {
 
-	public SceneJavaFx(Stage primaryStage) {
+	public FenetreJavaFx(Stage primaryStage) {
 		try {
 			BorderPane root = new BorderPane();
 			Scene scene = new Scene(root,400,400);

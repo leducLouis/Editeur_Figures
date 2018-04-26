@@ -21,7 +21,7 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}*/
-		CanevasJavaFx canevas = new CanevasJavaFx(primaryStage);
+		CanevasJavaFx canevas = new CanevasJavaFx();
 	}
 	
 	public static void main(String[] args) {
