@@ -6,6 +6,7 @@ import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.shape.Polygon;
 import model.ShapePolygone;
 import model.ShapeRectangle;
 
@@ -23,8 +24,13 @@ public class ShapeDrawerFx implements ShapeDrawer{
 	}
 
 	@Override
-	public void drawPolygone(ShapePolygone poly) {
-		// TODO Auto-generated method stub
+	public void drawPolygone(ShapePolygone poly, Pane pane) {
+		Polygon fxPoly = new Polygon();
+		fxPoly.getPoints().addAll(new Double[]{
+			    0.0, 0.0,
+			    20.0, 10.0,
+			    10.0, 20.0 });
+		pane.getChildren().add(fxPoly);
 		
 	}
 

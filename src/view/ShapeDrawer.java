@@ -10,6 +10,6 @@ import model.ShapeRectangle;
 
 public interface ShapeDrawer {
 
-	void drawPolygone(ShapePolygone poly);
 	void drawRectangle(ShapeRectangle rect, Pane pane);
+	void drawPolygone(ShapePolygone poly, Pane pane);
 }
