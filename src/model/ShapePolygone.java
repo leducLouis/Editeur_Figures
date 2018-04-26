@@ -2,7 +2,7 @@ package model;
 
 import java.awt.Color;
 
-public class ShapePolygone implements Shape{
+public class ShapePolygone implements Shape {
 	
 	private double[] coord = new double[255];
 	private double xpos;

@@ -12,20 +12,12 @@ public class ShapeComposite implements ShapeComposant {
 		createMemento();
 	}
 
-	@Override
 	public void addEntity(ShapeComposant s) {
-		// TODO Auto-generated method stub
-		
+		Shapes.add(s);		
 	}
 
-	@Override
-	public void removeEntity() {
-		// TODO Auto-generated method stub
-	}
-
-	@Override
 	public void getChildren() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 	
