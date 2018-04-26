@@ -1,7 +1,10 @@
 package application;
+
+
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
+import view.CanevasJavaFx;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 
@@ -18,7 +21,7 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}*/
-		Whiteboard whiteboard = new Whiteboard(primaryStage);
+		CanevasJavaFx canevas = new CanevasJavaFx(primaryStage);
 	}
 	
 	public static void main(String[] args) {
