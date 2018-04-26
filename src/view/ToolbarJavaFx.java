@@ -22,16 +22,6 @@ public class ToolbarJavaFx implements Toolbar{
 		
 	}
 
-	@Override
-	public void drawRectangle(Rectangle rect) {
-		// TODO Auto-generated method stub
-		
-	}
 
-	@Override
-	public void drawPolygone(Polygone poly) {
-		// TODO Auto-generated method stub
-		
-	}
 
 }

@@ -10,22 +10,9 @@ import javafx.scene.layout.BorderPane;
 
 
 public class CanevasJavaFx implements Canevas{
-	public CanevasJavaFx() {
+	public CanevasJavaFx(ShapeDrawer shapeDrawer) {
 		
 	}
-
-	@Override
-	public void drawRectangle(Rectangle rect) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	@Override
-	public void drawPolygone(Polygone poly) {
-		// TODO Auto-generated method stub
-		
-	}
-
 	
 
 }
