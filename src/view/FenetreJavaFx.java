@@ -11,6 +11,8 @@ public class FenetreJavaFx implements Fenetre {
 			BorderPane root = new BorderPane();
 			Scene scene = new Scene(root,400,400);
 			//scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
+			ShapeDrawer shapeDrawer = new ShapeDrawerFx();
+			Canevas canevas = new CanevasJavaFx(shapeDrawer, scene);
 			primaryStage.setScene(scene);
 			primaryStage.show();
 			

@@ -5,6 +5,8 @@ package application;
 import javafx.application.Application;
 import javafx.stage.Stage;
 import view.CanevasJavaFx;
+import view.Fenetre;
+import view.FenetreJavaFx;
 import view.ShapeDrawer;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -24,7 +26,8 @@ public class Main extends Application {
 		} catch(Exception e) {
 			e.printStackTrace();
 		}*/
-		CanevasJavaFx canevas = new CanevasJavaFx(shapeDrawer);
+		//CanevasJavaFx canevas = new CanevasJavaFx(shapeDrawer);
+		Fenetre fenetre = new FenetreJavaFx(primaryStage);
 	}
 	
 	public static void main(String[] args) {
