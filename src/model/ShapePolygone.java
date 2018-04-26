@@ -3,7 +3,10 @@ package model;
 import java.awt.Color;
 
 public class ShapePolygone implements Shape{
-	public ShapePolygone( int xpos, int ypos, int nbSides, int sideLenght, int rotation, int xCenter, int yCenter,
+	
+	private double[] coord;
+	
+	public ShapePolygone( double xpos, double ypos, int nbSides, double sideLenght, double rotation, double xCenter, double yCenter,
 			Color color) {
 		super();
 		
@@ -15,47 +18,70 @@ public class ShapePolygone implements Shape{
 		this.xCenter = xCenter;
 		this.yCenter = yCenter;
 		this.color = color;
+		setCoord(nbSides);
 	}
 
-	private int xpos;
-	private int ypos;
+	private double xpos;
+	private double ypos;
 	private int nbSides;
-	private int sideLenght;
-	private int rotation;
-	private int xCenter;
-	private int yCenter;
+	private double sideLenght;
+	private double rotation;
+	private double xCenter;
+	private double yCenter;
 	private Color color;
 	
+	public void setCoord(int nbSides) {
+		coord[0] = xpos;
+		coord[1] = ypos;
+		int indice = 2;
+		int cpt = nbSides-1;
+		while(cpt!=0) {
+			coord[indice] = getXCenter() + calculateRay()*Math.cos(angleFromCenter());
+			coord[indice+1] = getYCenter() + calculateRay()*Math.sin(angleFromCenter());
+			indice = indice+2;
+			cpt--;
+		}
+	}
 	
-	public int getXpos() {
+	public double angleFromCenter() {
+		return 360/nbSides;
+	}
+	
+	public double calculateRay() {
+		return Math.sqrt((1-Math.cos(angleFromCenter())-sideLenght*sideLenght)/2);
+	}
+	
+	public void setXCenter() {
+		xCenter = getXpos()-calculateRay()*Math.cos(angleFromCenter());
+	}
+	
+	public void setYCenter() {
+		yCenter = getYpos()-calculateRay()*Math.sin(angleFromCenter());
+	}
+	
+	public double getXpos() {
 		return xpos;
 	}
-	public void setXpos(int xpos) {
+	public void setXpos(double xpos) {
 		this.xpos = xpos;
 	}
-	public int getYpos() {
+	public double getYpos() {
 		return ypos;
 	}
-	public void setYpos(int ypos) {
+	public void setYpos(double ypos) {
 		this.ypos = ypos;
 	}
-	public int getRotation() {
+	public double getRotation() {
 		return rotation;
 	}
-	public void setRotation(int rotation) {
+	public void setRotation(double rotation) {
 		this.rotation = rotation;
 	}
-	public int getXCenter() {
+	public double getXCenter() {
 		return xCenter;
 	}
-	public void setXCenter(int xCenter) {
-		this.xCenter = xCenter;
-	}
-	public int getYCenter() {
+	public double getYCenter() {
 		return yCenter;
-	}
-	public void setYCenter(int yCenter) {
-		this.yCenter = yCenter;
 	}
 	public Color getColor() {
 		return color;
@@ -74,10 +100,10 @@ public class ShapePolygone implements Shape{
 	public void setNbSides(int nbSides) {
 		this.nbSides = nbSides;
 	}
-	public int getSideLenght() {
+	public double getSideLenght() {
 		return sideLenght;
 	}
-	public void setSideLenght(int sideLenght) {
+	public void setSideLenght(double sideLenght) {
 		this.sideLenght = sideLenght;
 	}
 

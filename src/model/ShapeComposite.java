@@ -21,7 +21,6 @@ public class ShapeComposite implements ShapeComposant {
 	@Override
 	public void removeEntity() {
 		// TODO Auto-generated method stub
-		
 	}
 
 	@Override
