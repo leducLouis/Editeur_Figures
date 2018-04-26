@@ -9,6 +9,7 @@ public class ShapeComposite implements ShapeComposant {
 	
 	public ShapeComposite() {
 		state = this;
+		createMemento();
 	}
 
 	@Override
@@ -34,7 +35,37 @@ public class ShapeComposite implements ShapeComposant {
 	}
 	
 	public BoardMemento createMemento() {
-		return new BoardMemento(this);
+		return new BoardMemento(state);
+	}
+	
+	@Override
+	public void translation() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getXpos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setXpos(int xpos) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public int getYpos() {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void setYpos(int ypos) {
+		// TODO Auto-generated method stub
+		
 	}
 
 }

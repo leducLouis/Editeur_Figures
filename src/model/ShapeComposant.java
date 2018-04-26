@@ -1,7 +1,9 @@
 package model;
 
 public interface ShapeComposant {
-	void addEntity();
-	void removeEntity();
-	void getChildren();
+	public void translation();
+	public int getXpos();
+	public void setXpos(int xpos);
+	public int getYpos();
+	public void setYpos(int ypos);
 }

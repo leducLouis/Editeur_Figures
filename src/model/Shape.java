@@ -2,13 +2,8 @@ package model;
 
 import java.awt.Color;
 
-public interface Shape {
+public interface Shape extends ShapeComposant {
 	
-	public void translation();
-	public int getXpos();
-	public void setXpos(int xpos);
-	public int getYpos();
-	public void setYpos(int ypos);
 	public int getRotation();
 	public void setRotation(int rotation);
 	public int getXCenter();
