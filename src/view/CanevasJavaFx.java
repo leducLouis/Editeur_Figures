@@ -3,8 +3,6 @@ import java.awt.Color;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import model.Polygone;
-import model.Rectangle;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 

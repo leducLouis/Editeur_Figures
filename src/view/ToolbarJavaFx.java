@@ -1,7 +1,6 @@
 package view;
 
-import model.Polygone;
-import model.Rectangle;
+
 import model.Shape;
 
 public class ToolbarJavaFx implements Toolbar{

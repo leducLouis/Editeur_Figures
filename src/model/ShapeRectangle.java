@@ -2,8 +2,8 @@ package model;
 
 import java.awt.Color;
 
-public class Rectangle implements Shape{
-	public Rectangle(int xpos, int ypos, int width, int height, int rotation, int xCenter, int yCenter, Color color,
+public class ShapeRectangle implements Shape{
+	public ShapeRectangle(int xpos, int ypos, int width, int height, int rotation, int xCenter, int yCenter, Color color,
 			int round) {
 		super();
 		this.xpos = xpos;

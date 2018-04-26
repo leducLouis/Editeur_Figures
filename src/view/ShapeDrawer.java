@@ -2,10 +2,13 @@ package view;
 
 import com.sun.javafx.geom.Rectangle;
 
-import model.Polygone;
+import javafx.scene.Scene;
+import model.ShapePolygone;
+import model.ShapeRectangle;
+
 
 public interface ShapeDrawer {
 
-	void drawRectangle(Rectangle Rect);
-	void drawPolygone(Polygone poly);
+	void drawRectangle(ShapeRectangle Rect, Scene primaryScene);
+	void drawPolygone(ShapePolygone poly);
 }

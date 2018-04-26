@@ -2,8 +2,8 @@ package model;
 
 import java.awt.Color;
 
-public class Polygone implements Shape{
-	public Polygone( int xpos, int ypos, int nbSides, int sideLenght, int rotation, int xCenter, int yCenter,
+public class ShapePolygone implements Shape{
+	public ShapePolygone( int xpos, int ypos, int nbSides, int sideLenght, int rotation, int xCenter, int yCenter,
 			Color color) {
 		super();
 		
