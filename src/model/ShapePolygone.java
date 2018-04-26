@@ -4,7 +4,15 @@ import java.awt.Color;
 
 public class ShapePolygone implements Shape{
 	
-	private double[] coord;
+	private double[] coord = new double[255];
+	private double xpos;
+	private double ypos;
+	private int nbSides;
+	private double sideLenght;
+	private double rotation;
+	private double xCenter;
+	private double yCenter;
+	private Color color;
 	
 	public ShapePolygone( double xpos, double ypos, int nbSides, double sideLenght, double rotation, double xCenter, double yCenter,
 			Color color) {
@@ -20,22 +28,13 @@ public class ShapePolygone implements Shape{
 		this.color = color;
 		setCoord(nbSides);
 	}
-
-	private double xpos;
-	private double ypos;
-	private int nbSides;
-	private double sideLenght;
-	private double rotation;
-	private double xCenter;
-	private double yCenter;
-	private Color color;
 	
 	public void setCoord(int nbSides) {
-		coord[0] = xpos;
-		coord[1] = ypos;
+		coord[0] = this.getXpos();
+		coord[1] = this.getYpos();
 		int indice = 2;
 		int cpt = nbSides-1;
-		while(cpt!=0) {
+		while(cpt>0) {
 			coord[indice] = this.getXCenter() + this.calculateRay()*Math.cos(this.angleFromCenter());
 			coord[indice+1] = this.getYCenter() + this.calculateRay()*Math.sin(this.angleFromCenter());
 			indice = indice+2;
@@ -44,6 +43,8 @@ public class ShapePolygone implements Shape{
 	}
 	
 	public double angleFromCenter() {
+		if(nbSides <= 0)
+			nbSides = 1;
 		return 360/nbSides;
 	}
 	
