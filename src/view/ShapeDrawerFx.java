@@ -26,10 +26,11 @@ public class ShapeDrawerFx implements ShapeDrawer{
 	@Override
 	public void drawPolygone(ShapePolygone poly, Pane pane) {
 		Polygon fxPoly = new Polygon();
-		fxPoly.getPoints().addAll(new Double[]{
-			    0.0, 0.0,
-			    20.0, 10.0,
-			    10.0, 20.0 });
+		
+		for (int i =0; i< poly.getNbSides()*2; i++) {
+			fxPoly.getPoints().addAll(poly.getCoord()[i]);
+			//System.out.println(poly.getCoord()[i]);
+		}
 		pane.getChildren().add(fxPoly);
 		
 	}

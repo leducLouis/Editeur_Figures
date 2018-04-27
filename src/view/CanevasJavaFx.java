@@ -8,26 +8,28 @@ import model.ShapeRectangle;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Line;
 
 
 public class CanevasJavaFx implements Canevas{
 
-	public CanevasJavaFx(ShapeDrawer shapeDrawer, Scene scene) {
+	public CanevasJavaFx(ShapeDrawer shapeDrawer, Scene scene, BorderPane rootPane) {
 		Color couleur = new Color(50, 50, 200);
 		
 		ShapeRectangle rect = new ShapeRectangle(20.0, 20.0, 250, 100, 0.0, 0.0, 0.0, couleur , 0);
-		ShapePolygone poly = new ShapePolygone(0, 0, 0, 0, 0, 0, 0, null);
+		ShapePolygone poly = new ShapePolygone(50, 50, 5, 10, 0.0, 0.0, 0.0, new Color(200,50,50));
 		
-		double canevasHeight = (95*scene.getHeight())/100;
+		double canevasHeight =  (95*scene.getHeight())/100;
 		double canevasWitdth = (95*scene.getWidth())/100;
 		Pane canevas = new Pane();
 		canevas.setPrefSize(canevasWitdth, canevasHeight);
 		drawBorders(canevas, canevasHeight, canevasWitdth);
 		shapeDrawer.drawRectangle(rect, canevas);
-		
-		scene.setRoot(canevas);
+		shapeDrawer.drawPolygone(poly, canevas);
+		//rootPane.getChildren().add(canevas);
+		rootPane.setCenter(canevas);
 	}
 	
 	
