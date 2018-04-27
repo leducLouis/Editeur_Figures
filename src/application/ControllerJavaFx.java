@@ -1,7 +1,10 @@
 package application;
 
+import view.Fenetre;
+
 public class ControllerJavaFx implements Controller{
 
+	private Fenetre fenetre ;
 	public ControllerJavaFx() {
 		// TODO Auto-generated constructor stub
 	}

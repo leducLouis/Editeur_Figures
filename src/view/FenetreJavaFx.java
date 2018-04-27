@@ -41,7 +41,7 @@ public class FenetreJavaFx implements Fenetre {
 		Button boutonUndo = new Button("Undo");
 		boutonUndo.setTranslateX(100);
 		Button boutonRedo = new Button("Redo");
-		boutonRedo.setTranslateX(150);
+		boutonRedo.setTranslateX(150 );
 		commandPane.getChildren().addAll(boutonSave, boutonLoad, boutonUndo, boutonRedo);
 		borderPane.setTop(commandPane);
 	}
