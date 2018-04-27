@@ -3,7 +3,7 @@ package model;
 import java.awt.Color;
 
 public class ShapeRectangle implements Shape{
-	public ShapeRectangle(double xpos, double ypos, int width, int height, double rotation, double xCenter, double yCenter, Color color,
+	public ShapeRectangle(double xpos, double ypos, int width, int height, double rotation, Color color,
 			int round) {
 		super();
 		this.xpos = xpos;

@@ -16,7 +16,7 @@ public class ToolbarJavaFx implements Toolbar{
 	public ToolbarJavaFx(ShapeDrawer shapeDrawer, Scene scene, BorderPane rootPane) {
 		Color couleur = new Color(50, 50, 200);
 		
-		ShapeRectangle rect = new ShapeRectangle(5.0, 5.0, 25, 10, 0.0, 0.0, 0.0, couleur , 0);
+		ShapeRectangle rect = new ShapeRectangle(5.0, 5.0, 25, 10, 0.0, couleur , 0);
 		//ShapePolygone poly = new ShapePolygone(0, 0, 0, 0, 0, 0, 0, null);
 		
 		double canevasHeight = (5*scene.getHeight())/100;
