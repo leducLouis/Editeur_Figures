@@ -24,9 +24,9 @@ public class ShapePolygone implements Shape {
 		this.sideLenght = sideLenght;
 		this.rotation = rotation;
 		this.color = color;
-		this.setCoord(nbSides);
 		this.setXCenter();
 		this.setYCenter();
+		this.setCoord(nbSides);
 	}
 	
 	public void setCoord(int nbSides) {
