@@ -34,11 +34,12 @@ public class ShapePolygone implements Shape {
 	public void setCoord(int nbSides) {
 		coord[0] = this.getXpos();
 		coord[1] = this.getYpos();
+		double alpha = (180-this.angleFromCenter())/2;
 		int indice = 2;
 		int cpt = nbSides-1;
 		while(cpt>0) {
-			coord[indice] = coord[indice-2]+Math.cos(this.angleFromCenter())*(this.getXCenter()-coord[indice-2])+Math.sin(this.angleFromCenter())*(this.getYCenter()-coord[indice-1]);
-			coord[indice+1] = coord[indice-1]+Math.sin(this.angleFromCenter())*(this.getXCenter()-coord[indice-2])+Math.cos(this.angleFromCenter())*(this.getYCenter()-coord[indice-1]);
+			coord[indice] = coord[indice-2]+Math.cos(alpha)*(this.getXCenter()-coord[indice-2])+Math.sin(alpha)*(this.getYCenter()-coord[indice-1]);
+			coord[indice+1] = coord[indice-1]+Math.sin(alpha)*(this.getXCenter()-coord[indice-2])+Math.cos(alpha)*(this.getYCenter()-coord[indice-1]);
 			indice = indice+2;
 			cpt--;
 		}
