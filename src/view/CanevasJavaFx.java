@@ -33,7 +33,7 @@ public class CanevasJavaFx implements Canevas{
 	}
 	
 	
-	private void drawBorders(Pane canevas, double height, double width){
+	public void drawBorders(Pane canevas, double height, double width){
 		Line border1 = new Line(0,0,width,0);
 		Line border2 = new Line (0,0, 0, height);
 		Line border3 = new Line (width, 0,width, height );
