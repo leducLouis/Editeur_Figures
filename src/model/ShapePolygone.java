@@ -55,8 +55,15 @@ public class ShapePolygone implements Shape {
 		return radian;
 	}
 	
+	public double angleFromCenterDegree() {
+		if(nbSides <= 0)
+			nbSides = 1;
+		double angleDeg = 360/nbSides;
+		return angleDeg;
+	}
+	
 	public double calculateRay() {
-		return Math.sqrt((1-Math.cos(this.angleFromCenter())-sideLenght*sideLenght)/2);
+		return Math.sqrt((1-Math.cos(this.angleFromCenterDegree())-sideLenght*sideLenght)/2);
 	}
 	
 	public void setXCenter() {
