@@ -27,7 +27,7 @@ public class CanevasJavaFx implements Canevas{
 		canevas.setPrefSize(canevasWitdth, canevasHeight);
 		drawBorders(canevas, canevasHeight, canevasWitdth);
 		shapeDrawer.drawRectangle(rect, canevas);
-		shapeDrawer.drawPolygone(poly, canevas);
+		//shapeDrawer.drawPolygone(poly, canevas);
 		//rootPane.getChildren().add(canevas);
 		rootPane.setCenter(canevas);
 	}
