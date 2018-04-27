@@ -67,11 +67,11 @@ public class ShapePolygone implements Shape {
 	}
 	
 	public void setXCenter() {
-		xCenter = this.getXpos()-this.calculateRay()*Math.cos(this.angleFromCenter());
+		xCenter = this.getXpos()-this.calculateRay()*Math.cos(this.angleFromCenterDegree());
 	}
 	
 	public void setYCenter() {
-		yCenter = this.getYpos()-this.calculateRay()*Math.sin(this.angleFromCenter());
+		yCenter = this.getYpos()-this.calculateRay()*Math.sin(this.angleFromCenterDegree());
 	}
 	
 	public double getXpos() {
