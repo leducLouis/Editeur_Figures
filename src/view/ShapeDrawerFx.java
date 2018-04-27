@@ -29,7 +29,7 @@ public class ShapeDrawerFx implements ShapeDrawer{
 		
 		for (int i =0; i< poly.getNbSides()*2; i++) {
 			fxPoly.getPoints().addAll(poly.getCoord()[i]);
-			//System.out.println(poly.getCoord()[i]);
+			System.out.println(poly.getCoord()[i]);
 		}
 		pane.getChildren().add(fxPoly);
 		

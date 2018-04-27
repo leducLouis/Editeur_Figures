@@ -19,7 +19,7 @@ public class CanevasJavaFx implements Canevas{
 		Color couleur = new Color(50, 50, 200);
 		
 		ShapeRectangle rect = new ShapeRectangle(20.0, 20.0, 250, 100, 0.0, 0.0, 0.0, couleur , 0);
-		ShapePolygone poly = new ShapePolygone(50, 50, 5, 10, 0.0, 0.0, 0.0, new Color(200,50,50));
+		ShapePolygone poly = new ShapePolygone(200, 30, 5, 10, 0.0, new Color(200,50,50));
 		
 		double canevasHeight =  (95*scene.getHeight())/100;
 		double canevasWitdth = (95*scene.getWidth())/100;
