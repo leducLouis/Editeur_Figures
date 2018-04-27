@@ -14,7 +14,7 @@ public class ShapePolygone implements Shape {
 	private double yCenter;
 	private Color color;
 	
-	public ShapePolygone( double xpos, double ypos, int nbSides, double sideLenght, double rotation, double xCenter, double yCenter,
+	public ShapePolygone( double xpos, double ypos, int nbSides, double sideLenght, double rotation,
 			Color color) {
 		super();
 		
@@ -23,8 +23,6 @@ public class ShapePolygone implements Shape {
 		this.nbSides = nbSides;
 		this.sideLenght = sideLenght;
 		this.rotation = rotation;
-		this.xCenter = xCenter;
-		this.yCenter = yCenter;
 		this.color = color;
 		this.setCoord(nbSides);
 		this.setXCenter();
@@ -41,7 +39,9 @@ public class ShapePolygone implements Shape {
 			coord[indice] = this.getXCenter()+
 					Math.cos(alpha)*(coord[indice-2]-this.getXCenter())
 					+Math.sin(alpha)*(coord[indice-1]-this.getYCenter());
-			coord[indice+1] = this.getYCenter()-Math.sin(alpha)*(coord[indice-2]-this.getXCenter())+Math.cos(alpha)*(coord[indice-1]-this.getYCenter());
+			coord[indice+1] = this.getYCenter()-
+					Math.sin(alpha)*(coord[indice-2]-this.getXCenter())
+					+Math.cos(alpha)*(coord[indice-1]-this.getYCenter());
 			indice = indice+2;
 			cpt--;
 		}
